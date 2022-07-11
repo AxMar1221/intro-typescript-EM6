@@ -1,22 +1,13 @@
 "use strict";
 (() => {
-    const avenger = {
-        nombre: 'Steve',
-        clave: 'Capitan América',
-        poder: 'Droga'
-    };
-    const extraer = ({ nombre, poder }) => {
-        // const {nombre, clave} = avenger;
-        console.log(nombre);
-        console.log(poder);
-    };
-    // extraer( avenger );
-    const avengers = ['Spiderman', 'Antman', 'MsMarvel'];
-    const [, , Gwen] = avengers;
-    const extraerArr = ([spiderman, antman, MsMarvel]) => {
-        console.log(spiderman);
-        console.log(antman);
-        console.log(MsMarvel);
-    };
-    extraerArr(avengers);
+    console.log('inicio');
+    const prom1 = new Promise((resolve, rejet) => {
+        setTimeout(() => {
+            rejet('se termino el timeout');
+        }, 1000);
+    });
+    prom1
+        .then(mensaje => console.log(mensaje))
+        .catch(err => console.warn(err));
+    console.log('fin');
 })();
