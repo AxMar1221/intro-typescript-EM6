@@ -1,20 +1,22 @@
 "use strict";
 (() => {
-    let miFuncion = function (a) {
-        return a;
+    const avenger = {
+        nombre: 'Steve',
+        clave: 'Capitan América',
+        poder: 'Droga'
     };
-    const miFuncionF = (a) => a.toUpperCase;
-    const sumarN = function (a, b) {
-        return a + b;
+    const extraer = ({ nombre, poder }) => {
+        // const {nombre, clave} = avenger;
+        console.log(nombre);
+        console.log(poder);
     };
-    const sumarNN = (a, b) => a + b;
-    const hulk = {
-        nombre: 'Hulk',
-        smash() {
-            setTimeout(() => {
-                console.log(`${this.nombre} smash!!`);
-            }, 1000);
-        }
+    // extraer( avenger );
+    const avengers = ['Spiderman', 'Antman', 'MsMarvel'];
+    const [, , Gwen] = avengers;
+    const extraerArr = ([spiderman, antman, MsMarvel]) => {
+        console.log(spiderman);
+        console.log(antman);
+        console.log(MsMarvel);
     };
-    hulk.smash();
+    extraerArr(avengers);
 })();
