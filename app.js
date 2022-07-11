@@ -1,16 +1,12 @@
 "use strict";
 (() => {
-    function getEdad() {
-        return 100 + 100 + 300;
+    function activar(quien, momento, objeto = 'Batiseñal') {
+        if (momento) {
+            console.log(`${quien} activó la ${objeto} en la ${momento}`);
+        }
+        else {
+            console.log(`${quien} activó la ${objeto}`);
+        }
     }
-    const nombre = 'Tachi';
-    const apellido = "Dito";
-    const edad = 39;
-    // const salida = nombre + " " + apellido + " " + edad 
-    const salida = `
-    ${nombre}
-    ${apellido}
-    ( ${getEdad()} )`;
-    console.log(salida);
-    // Tachi Dito ( edad: 39 )
+    activar('Gordon');
 })();
