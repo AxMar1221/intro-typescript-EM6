@@ -1,32 +1,37 @@
 "use strict";
 (() => {
-    class Avenger {
-        // nombre: string;
-        // equipo: string;
-        // nombreReal:  string;
-        // puedePelear: boolean;
-        // peleasGanadas: number;
-        constructor(nombre, equipo, nombreReal, puedePelear = true, peleasGanadas = 0) {
-            this.nombre = nombre;
-            this.equipo = equipo;
-            this.nombreReal = nombreReal;
-            this.puedePelear = puedePelear;
-            this.peleasGanadas = peleasGanadas;
+    // Uso de Let y Const
+    let nombre = 'Ricardo Tapia';
+    let edad = 23;
+    const PERSONAJE = {
+        nombre: nombre,
+        edad: edad
+    };
+    const batman = {
+        nombre: 'Bruno Díaz',
+        artesMarciales: ['Karate', 'Aikido', 'Wing Chun', 'Jiu-Jitsu']
+    };
+    // Convertir esta funcion a una funcion de flecha
+    const resultadoDoble = (a, b) => ((a + b) * 2);
+    // Función con parametros obligatorios, opcionales y por defecto
+    // donde NOMBRE = obligatorio
+    //       PODER  = opcional
+    //       ARMA   = por defecto = 'arco'
+    function getAvenger(nombre, poder, arma = 'arco') {
+        var mensaje;
+        if (poder) {
+            mensaje = nombre + ' tiene el poder de: ' + poder + ' y un arma: ' + arma;
+        }
+        else {
+            mensaje = nombre + ' tiene un ' + poder;
         }
     }
-    const antman = new Avenger('Capitan América', 'Capi', 'Steve');
-    console.log(antman);
+    ;
+    // Cree una clase que permita manejar la siguiente estructura
+    // La clase se debe de llamar rectangulo,
+    // debe de tener dos propiedades:
+    //   * base
+    //   * altura
+    // También un método que calcule el área  =  base * altura,
+    // ese método debe de retornar un numero.
 })();
-// class Avenger {
-//     nombre: string;
-//     equipo: string;
-//     nombreReal?:  string;
-//     puedePelear?: boolean;
-//     peleasGanadas?: number;
-//     constructor( nombre: string, equio: string) {
-//         this.nombre = nombre;
-//         this.equipo = equio;
-//     }
-// }
-// const antman: Avenger = new Avenger( 'Antman', 'Capi');
-// console.log( antman );
