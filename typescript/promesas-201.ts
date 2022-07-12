@@ -16,4 +16,4 @@
     retirarDinero( 250 )
         .then( montoActual => console.log(`Me quedan ${ montoActual }`))
         .catch( console.warn )
-    })();
+})();

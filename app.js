@@ -1,18 +1,15 @@
 "use strict";
 (() => {
-    const retirarDinero = (montoRetirar) => {
-        let dineroActual = 1000;
-        return new Promise((resolve, rejet) => {
-            if (montoRetirar > dineroActual) {
-                rejet('fondos insuficientes');
-            }
-            else {
-                dineroActual -= montoRetirar;
-                resolve(dineroActual);
-            }
-        });
+    const enviarMision = (xmen) => {
+        console.log(`Enviando a ${xmen.nombre} a la misión`);
     };
-    retirarDinero(250)
-        .then(montoActual => console.log(`Me quedan ${montoActual}`))
-        .catch(console.warn);
+    const regresarAlCuartel = (xmen) => {
+        console.log(`Regresando ${xmen.nombre} al cuartel`);
+    };
+    const wolverine = {
+        nombre: 'Logan',
+        edad: 60
+    };
+    enviarMision(wolverine);
+    regresarAlCuartel(wolverine);
 })();
