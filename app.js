@@ -1,13 +1,18 @@
 "use strict";
 (() => {
-    console.log('inicio');
-    const prom1 = new Promise((resolve, rejet) => {
-        setTimeout(() => {
-            rejet('se termino el timeout');
-        }, 1000);
-    });
-    prom1
-        .then(mensaje => console.log(mensaje))
-        .catch(err => console.warn(err));
-    console.log('fin');
+    const retirarDinero = (montoRetirar) => {
+        let dineroActual = 1000;
+        return new Promise((resolve, rejet) => {
+            if (montoRetirar > dineroActual) {
+                rejet('fondos insuficientes');
+            }
+            else {
+                dineroActual -= montoRetirar;
+                resolve(dineroActual);
+            }
+        });
+    };
+    retirarDinero(250)
+        .then(montoActual => console.log(`Me quedan ${montoActual}`))
+        .catch(console.warn);
 })();
